@@ -1,0 +1,135 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --panel-2: #1f2937;
+  --board-bg: #020617;
+  --grid: rgba(148, 163, 184, 0.18);
+  --text: #e2e8f0;
+  --accent: #38bdf8;
+  --accent-2: #a78bfa;
+  --danger: #f87171;
+  --shadow: rgba(15, 23, 42, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #0f172a, #111827 40%, #1e293b);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+}
+
+.game-shell {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 60px var(--shadow);
+}
+
+#game,
+#next {
+  display: block;
+  background: var(--board-bg);
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.sidebar {
+  width: 180px;
+}
+
+.sidebar h1 {
+  margin: 0 0 18px;
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.info-box,
+.preview-box {
+  background: rgba(31, 41, 55, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 12px;
+  padding: 14px 12px;
+  margin-bottom: 18px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  padding: 6px 0;
+}
+
+.row strong {
+  color: #f8fafc;
+}
+
+.preview-box h2 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+#next {
+  margin: 0 auto;
+  background: #020617;
+}
+
+.controls {
+  margin-bottom: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 18px rgba(56, 189, 248, 0.25);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.help {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  background: rgba(17, 24, 39, 0.85);
+  border-radius: 10px;
+  padding: 12px 10px;
+}
+
+.help p {
+  margin: 6px 0;
+}
+
+@media (max-width: 640px) {
+  .game-shell {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}

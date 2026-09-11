@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제비우스 슈팅 게임</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hud">
+        <div class="stat">
+          <span>점수</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat">
+          <span>생명</span>
+          <strong id="lives">3</strong>
+        </div>
+        <div class="stat">
+          <span>레벨</span>
+          <strong id="level">1</strong>
+        </div>
+      </header>
+
+      <canvas id="game" width="960" height="540" aria-label="우주 슈팅 게임 화면"></canvas>
+
+      <div class="controls">
+        <button id="restartBtn" type="button">재시작</button>
+        <p>WASD / 방향키 이동 · Space / 클릭 발사</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

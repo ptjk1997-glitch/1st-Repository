@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제비루스 스타일 종스크롤 러너</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-wrap">
+      <header class="hud">
+        <div class="hud-item">
+          <span>점수</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="hud-item">
+          <span>최고</span>
+          <strong id="best">0</strong>
+        </div>
+      </header>
+
+      <canvas id="game" width="960" height="540" aria-label="종스크롤 게임 화면"></canvas>
+
+      <div class="controls">
+        <button id="restartBtn" type="button">다시 시작</button>
+        <p>Space / ↑ / 클릭: 점프</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
